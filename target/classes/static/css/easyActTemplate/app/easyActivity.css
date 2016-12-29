@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/*!
+ * Painter (v0.1.0) - Sass mixin helper
+ * https://github.com/ourai/painter
+ *
+ * Copyright 2015, 2015 Ourai Lin (http://ourai.ws/)
+ *
+ * Date: 2015-10-14
+ */
+body {
+  background: #df0d3e;
+}
+
+.js-Link {
+  display: block;
+}
+
+#Page-header {
+  height: 3.33333rem;
+  background: #ffb715;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Page-header h1 {
+  background: transparent url("../../../images/app/logo.png") no-repeat 50% 50%;
+  background-size: cover;
+  background-image: -webkit-image-set(url("../../../images/app/logo.png") 1x, url("../../../images/app/logo-2x.png") 2x);
+  background-image: image-set(url("../../../images/app/logo.png") 1x, url("../../../images/app/logo-2x.png") 2x);
+  text-indent: -9999px;
+  height: 100%;
+  width: 6.16667rem;
+  height: 1.04167rem;
+  margin: 0;
+}
+
+#Page-header .Phone {
+  font-size: 1.16667rem;
+  color: #000;
+}
+
+#Page-header .Phone .Phone-number {
+  vertical-align: middle;
+}
+
+#Page-header .Phone:before {
+  content: '';
+  display: inline-block;
+  background: transparent url("../../../images/app/icon-tel.png") no-repeat 50% 50%;
+  background-size: cover;
+  background-image: -webkit-image-set(url("../../../images/app/icon-tel.png") 1x, url("../../../images/app/icon-tel-2x.png") 2x);
+  background-image: image-set(url("../../../images/app/icon-tel.png") 1x, url("../../../images/app/icon-tel-2x.png") 2x);
+  width: 1.16667rem;
+  height: 1.16667rem;
+  margin-right: 0.41667rem;
+  vertical-align: middle;
+}
+
+#Page-banner > a {
+  display: block;
+}
+
+#Page-banner img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+#Page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#Page-footer .download-tip {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  padding: 0.6rem 0;
+}
+
+#Page-footer .download-tip .download-close {
+  float: left;
+  margin-left: 1rem;
+  padding: 0.6rem 0;
+}
+
+#Page-footer .download-tip .download-close img {
+  width: 1.6rem;
+}
+
+#Page-footer .download-tip .download-logo {
+  float: left;
+  margin-left: 0.7rem;
+}
+
+#Page-footer .download-tip .download-logo img {
+  width: 3rem;
+}
+
+#Page-footer .download-tip .download-desc {
+  float: left;
+  margin-left: 1rem;
+}
+
+#Page-footer .download-tip .download-desc span {
+  display: block;
+  color: #fff;
+}
+
+#Page-footer .download-tip .download-anchor {
+  float: right;
+  margin-right: 1rem;
+  display: block;
+  width: 5.84rem;
+  height: 2.5rem;
+  background: #FF9933;
+  border-radius: 0.2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+#Page-content{
+  padding-bottom:5rem;
+}
+#Page-content .Activity-list .Activity-item {
+  overflow: hidden;
+  background: #fff;
+  margin: 0.83333rem 0.83333rem 0 0.83333rem;
+}
+
+#Page-content .Activity-list .Activity-item > a {
+  display: block;
+}
+
+#Page-content .Activity-list .Activity-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#Page-content .Activity-list .Activity-item--commodity {
+  position: relative;
+  border-radius: 0.41667rem;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-tag {
+  position: absolute;
+  background: #fe8f0c;
+  top: 0;
+  left: 0;
+  padding: 0.33333rem 0.41667rem;
+  font-size: 1.08333rem;
+  border-radius: 0 0 0.41667rem 0;
+  color: #fff;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-description {
+  position: relative;
+  background: #fff;
+  padding: 1.04167rem 0.91667rem;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-description::before, #Page-content .Activity-list .Activity-item--commodity .Commodity-description::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 1.04167rem;
+  height: 1.04167rem;
+  border-radius: 50%;
+  background: #df0d3e;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-description::before {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-description::after {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-title {
+  margin-right: 1.66667rem;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-color {
+  display: inline-block;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  padding: 0.45833rem 0.91667rem;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1.08333rem;
+  color: #fff;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-summary {
+  font-size: 1rem;
+  color: #e90d3e;
+  margin: 0.41667rem 0 0;
+  padding: 0;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Price-title::after {
+  content: ':';
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Price-content::after {
+  content: '万';
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-mainPrice {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.16667rem;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-mainPrice .Price-content {
+  color: #ff0000;
+  font-size: 1.5rem;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-mainPrice .Price-content::after {
+  color: #4A4A4A;
+  font-size: 1.16667rem;
+}
+
+#Page-content .Activity-list .Activity-item--commodity .Commodity-secondaryPrice {
+  display: inline-block;
+  font-size: 1.16667rem;
+}
+
+#Page-content .Activity-list .Activity-item--double {
+  border-radius: 0;
+  background: transparent;
+  display: flex;
+}
+
+#Page-content .Activity-list .Activity-item--double .DoubleItem {
+  position: relative;
+  background: #fff;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#Page-content .Activity-list .Activity-item--double .DoubleItem .js-Link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#Page-content .Activity-list .Activity-item--double .DoubleItem .js-Link > img {
+  flex: 1;
+}
+
+#Page-content .Activity-list .Activity-item--double .DoubleItem--left {
+  margin-right: 0.83333rem;
+}
+
+#Page-content .Activity-list .Activity-item--double.Activity-item--commodity .DoubleItem {
+  border-radius: 0.41667rem;
+}
+
+#Page-content .Activity-list .Activity-item--double.Activity-item--commodity .Commodity-mainPrice {
+  display: block;
+  width: auto;
+  margin-bottom: 0.41667rem;
+}
+
+#Page-content .Activity-list .Activity-item--double.Activity-item--commodity .Commodity-secondaryPrice {
+  display: block;
+}
+
+#Page-content .Activity-list .Activity-item--double.Activity-item--commodity .Commodity-description::before, #Page-content .Activity-list .Activity-item--double.Activity-item--commodity .Commodity-description::after {
+  display: none;
+}
+/*add by qingtian for set noSpace*/
+#Page-content::before,.Activity-list::before{
+  content: '';
+  clear:both;
+  display: table;
+}
+#Page-content .Activity-list .Activity-item.no-space{
+  margin:0 !important;
+}

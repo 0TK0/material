@@ -1,0 +1,6 @@
+#if($!{msg.size()}>0)
+    #set($map=$!{msg})
+    #foreach($!{entry} in $map.entrySet())
+        $!{entry.getValue()}
+    #end
+#end

@@ -1,0 +1,336 @@
+.ui-widget-overlay {
+  background: #000;
+  opacity: 0.6; }
+
+.ui-widget-content {
+  background: #fff;
+  border-radius: 0.04rem;
+  padding: 0; }
+
+.ui-dialog .ui-dialog-titlebar {
+  text-align: center;
+  padding: 0.4rem 0 0.15rem;
+  line-height: 1; }
+.ui-dialog .ui-dialog-title {
+  font-size: 0.32rem;
+  color: #373737;
+  font-weight: 500; }
+.ui-dialog .ui-dialog-buttonpane {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #E7E7E7; }
+  .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: none;
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex; }
+  .ui-dialog .ui-dialog-buttonpane button {
+    display: block;
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    font-size: 0.32rem;
+    margin: 0;
+    text-align: center;
+    padding: 0.22rem 0; }
+    .ui-dialog .ui-dialog-buttonpane button.ui-button-ok {
+      color: #FF8903; }
+    .ui-dialog .ui-dialog-buttonpane button.ui-button-cancel {
+      border-right: 1px solid #E7E7E7; }
+.ui-dialog .ui-dialog-content {
+  font-size: 0.28rem;
+  color: #626262;
+  padding: 0.1rem 0.5rem 0.4rem; }
+  .ui-dialog .ui-dialog-content p {
+    margin: 0; }
+
+.no-close .ui-dialog-title {
+  width: 100%; }
+.no-close .ui-dialog-titlebar-close {
+  display: none; }
+
+html {
+  height: 100%; }
+
+body {
+  display: box;
+  /* OLD - Android 4.4- */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background: #F3F4F5; }
+
+a, button {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.Tabs {
+  display: box;
+  /* OLD - Android 4.4- */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent; }
+  .Tabs .Tabs-header-wrap {
+    background: #fff;
+    border-bottom: 1px solid #AFAFAF;
+    padding: 0 0.1rem; }
+  .Tabs .Tabs-header {
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    height: 0.88rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    margin-bottom: -1px; }
+    .Tabs .Tabs-header::-webkit-scrollbar {
+      display: none; }
+    .Tabs .Tabs-header > li.Tabs-item {
+      display: box;
+      /* OLD - Android 4.4- */
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      float: none;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+      -moz-align-items: stretch;
+      -ms-align-items: stretch;
+      -o-align-items: stretch;
+      align-items: stretch;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0 0.1rem; }
+      .Tabs .Tabs-header > li.Tabs-item > a {
+        display: box;
+        /* OLD - Android 4.4- */
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        float: none;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        font-size: 0.3rem;
+        text-decoration: none;
+        margin: 0;
+        padding: 0 0.07rem;
+        color: #373737;
+        white-space: nowrap; }
+      .Tabs .Tabs-header > li.Tabs-item.ui-tabs-active > a {
+        color: #FF8903;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid; }
+  .Tabs .Tab-content {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    overflow: auto;
+    padding: 0;
+    border-radius: 0;
+    display: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+    .Tabs .Tab-content .Info-list {
+      background: #fff;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      .Tabs .Tab-content .Info-list .Info-item {
+        padding: 0.2rem 0.4rem 0.14rem;
+        border-bottom: 1px solid #E7E7E7; }
+      .Tabs .Tab-content .Info-list .Info-title {
+        font-size: 0.28rem;
+        color: #AFAFAF;
+        margin-bottom: 0.04rem; }
+      .Tabs .Tab-content .Info-list .Info-content {
+        font-size: 0.32rem;
+        color: #373737; }
+      .Tabs .Tab-content .Info-list .Info-content--img {
+        max-width: 100%;
+        height: auto; }
+        .Tabs .Tab-content .Info-list .Info-content--img + .Info-content--img {
+          margin-top: 0.1rem; }
+
+.Menu-operate {
+  display: box;
+  /* OLD - Android 4.4- */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  height: 0.9rem;
+  border-top: 1px solid #E7E7E7;
+  background: #fff;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  .Menu-operate .Button {
+    display: block;
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    background: #fff;
+    font-size: 0.32rem;
+    color: #FF8903;
+    text-decoration: none; }
+    .Menu-operate .Button:focus {
+      background-color: #fff; }
+    .Menu-operate .Button[disabled] {
+      color: #777;
+      cursor: not-allowed;
+      background-color: #eee; }
+    .Menu-operate .Button .icon-bell-alt {
+      margin-right: 0.1rem; }
+  .Menu-operate .js-accept {
+    border-right: 1px solid #E7E7E7; }
+  .Menu-operate .js-state {
+    display: box;
+    /* OLD - Android 4.4- */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    background-color: #FF9933;
+    color: #fff;
+    max-width: 1.6rem;
+    border-top: 1px solid #FF9933;
+    margin-top: -1px; }
+    .Menu-operate .js-state:focus {
+      background-color: #FF9933; }
+
+.Confirm {
+  display: none; }
+
+.accept-confirm {
+  width: 5.6rem; }
+
+.js-acceptForm,
+.js-rejectForm {
+  display: none; }
+
+/*# sourceMappingURL=orderDetail.css.map */

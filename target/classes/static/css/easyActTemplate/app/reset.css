@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/**
+ * @require "../../bower_components/normalize.css-3.0.3/normalize.css"
+ * @require "../../bower_components/fontawesome-4.5.0/css/font-awesome.min.css"
+ */
+/*!
+ * Painter (v0.1.0) - Sass mixin helper
+ * https://github.com/ourai/painter
+ *
+ * Copyright 2015, 2015 Ourai Lin (http://ourai.ws/)
+ *
+ * Date: 2015-10-14
+ */
+*:focus {
+  outline: none;
+}
+
+body {
+  font: 300 14px/1.5 "Pingfang SC", "Microsoft Yahei", Sans-serif;
+  color: #4A4A4A;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  border-style: none;
+}
+
+button, button:focus {
+  background-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * 重置 Select2 样式
+ */
+.select2-container .mhc-Select2-container,
+.select2-container .mhc-Select2-dropdown {
+  font-size: 12px;
+}
+
+.select2-container .mhc-Select2-container.select2-selection--single {
+  height: 23px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+
+.select2-container .mhc-Select2-container.select2-selection--single .select2-selection__rendered {
+  line-height: 21px;
+  color: inherit;
+  padding-left: 9px;
+}
+
+.select2-container .mhc-Select2-container.select2-selection--single .select2-selection__arrow {
+  height: auto;
+  bottom: 1px;
+  border-radius: 0 2px 2px 0;
+  background-color: #F4F4F5;
+}
+
+.select2-container .mhc-Select2-container.select2-selection--single .select2-selection__arrow b {
+  border-top-color: #bbb;
+}
+
+.select2-container.select2-container--open .mhc-Select2-container.select2-selection--single .select2-selection__arrow b {
+  border-bottom-color: #bbb;
+}
+
+.select2-container .mhc-Select2-dropdown .select2-results__option {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 8px;
+  line-height: 23px;
+}

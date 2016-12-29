@@ -1,0 +1,89 @@
+.iframeModal {
+  width: 550px;
+  position: fixed;
+  height: 440px;
+  left: 50%;
+  top: 50%;
+  margin-left: -275px;
+  margin-top: -220px;
+  background-color: #fff;
+  overflow: hidden;
+  display: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  padding: 0px;
+  z-index: 994;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s; }
+  .iframeModal > iframe {
+    display: none; }
+  .iframeModal.height-400 {
+    height: 400px; }
+  .iframeModal.height-200 {
+  height: 200px; }
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+.modalTitle {
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  background-color: #EBEBEB;
+  border-bottom: 1px solid #D5D5D5;
+  position: absolute;
+  top: 0;
+  z-index: 996;
+  left: 0;
+  text-indent: 10px; }
+
+.maskWrap {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 992; }
+
+.xubox_setwin {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 0; }
+  .xubox_setwin > .xubox_close0 {
+    width: 14px;
+    height: 14px;
+    background-position: -31px -7px;
+    cursor: pointer; }
+  .xubox_setwin > a {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    font-size: 12px;
+    _overflow: hidden; }
+
+.xulayer_png32 {
+  background: url(../images/xubox_ico0.png) no-repeat; }
+
+.loadGif {
+  display: block;
+  margin: 200px auto; }
+
+/*# sourceMappingURL=iframeDialog.css.map */

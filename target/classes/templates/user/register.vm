@@ -1,0 +1,103 @@
+<title>普诺--物料管理系统</title>
+<style type="text/css">
+
+    a{text-decoration: none}
+    ul li{list-style: none}
+    .browser {display: none;margin: 180px auto 0 auto}
+    .tab_container{padding-top:30px;width: 400px;margin: 0 auto;text-align: center}
+    .tab_container .imgbox{width: 80px;float: left;height: 100px;vertical-align: middle}
+    ._content {margin-right: 0;width:300px;float: right}
+    .c-btn{
+        display: inline-block;
+        padding: 0 14px;
+        margin: 0;
+        height: 26px;
+        line-height: 25px;
+        font-size: 13px;
+        filter: chroma(color=#000000);
+        border: 1px solid #d8d8d8;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #f9f9f9;
+        overflow: hidden;
+        outline: 0;}
+    .btn-down{
+        color:  #fff!important;
+        background-color: #388bff;
+        border-color: #3c8dff #408ffe #3680e6;
+    }
+    /* 清除浮动 */
+    .clearfix:after {
+        visibility:hidden;
+        display:block;
+        font-size:0;
+        content:" ";
+        clear:both;
+        height:0;
+
+    }
+    .clearfix {
+        zoom:1; /*  触发 hasLayout  for IE6 IE7 */
+    }
+
+    .login_chrome {display: none}
+
+    .dis-block{display: block}
+
+    @media (max-width: 767px){
+        .shenqing{
+            display: none;
+        }
+    }
+</style>
+##<div class="browser">
+##    <div style="margin: 30px auto;color:#666;text-align: center;"> 请使用谷歌Chrome浏览器访问本系统，以获得最佳的使用体验。</div>
+##    <div class="tab_container">
+##        <div id="tab1" class="tab_content clearfix">
+##
+##            <div class="imgbox"><a href="javascript:void(0);" target="_blank" ><img class="c-img c-img3" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1010232474,957948100&amp;fm=58"></a></div>
+##
+##            <div class="_content">
+##                <p>环境：Windows &nbsp;&nbsp; <a class="btn-down c-btn" href="http://www.baidu.com/link?url=ud8K-PKt4rJpA8zOW2X5V1_npHXKycwxZ4G1EDOJ0QN1KV3KLe5ExwMQKRka6WePddYhTX6Oi8zlyFzPnkEVPK" target="_blank">立即下载</a></p>
+##
+##
+##                <p>环境：Mac  &nbsp;&nbsp;<a style="margin-left:37px" class="btn-down c-btn" href="https://www.baidu.com/link?url=URELtALzgxp7u6mHhSDnEY3xEd-lWpMLyN7kY6ELhLMDbiYiJCnnJUZE2daJcdugs6ECpA0SXc6OhJngtgTur4iQZg5bim0JcrTX4Y4ugnu&wd=&eqid=a334247200049ad50000000556374f32" target="_blank">立即下载</a></p>
+##
+##            </div>
+##        </div>
+##    </div>
+##</div>
+
+<div class="pd-20" style="width:500px;margin-left: auto;margin-right: auto;">
+    <div class="cl pd-5 mt-20">
+        <span>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户注册</h3>
+        </span>
+    </div>
+    <div class="Huiform" style="width:500px;height:400px;">
+        <form  method="post" action="/user/reg">
+            <table class="table" style="margin-left: auto;margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>用户名:</td>
+                        <td><input type="text" name="name"/></td>
+                    </tr>
+                    <tr>
+                        <td>密码:</td>
+                        <td><input type="password" name="password"/></td>
+                    </tr>
+
+                    <tr>
+                        <td><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="submit">注册</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+

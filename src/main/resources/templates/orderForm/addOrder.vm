@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<script language="JavaScript" type="text/javascript" src="/js/jquery.min.js"></script>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/default.css" />
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<style type="text/css">
+    * {
+        background: none repeat scroll 0 0 transparent;
+        border: 0 none;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+        font-family:微软雅黑;
+        overflow:hidden;
+    }
+    #navi{
+        width:100%;
+        position:relative;
+        word-wrap:break-word;
+        border-bottom:1px solid #065FB9;
+        margin:0;
+        padding:0;
+        height:40px;
+        line-height:40px;
+        vertical-align:middle;
+        background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1,
+        #BFBFBF));
+    }
+    #naviDiv{
+        font-size:14px;
+        color:#333;
+        padding-left:10px;
+    }
+    #tips{
+        margin-top:10px;
+        width:100%;
+        height:40px;
+    }
+    #buttonGroup{
+        padding-left:10px;
+        float:left;
+        height:35px;
+    }
+    .button{
+        float:left;
+        margin-right:10px;
+        padding-left:10px;
+        padding-right:10px;
+        font-size:14px;
+        width:70px;
+        height:30px;
+        line-height:30px;
+        vertical-align:middle;
+        text-align:center;
+        cursor:pointer;
+        border-color: #77D1F6;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 6px 6px;
+        -moz-box-shadow: 2px 2px 4px #282828;
+        -webkit-box-shadow: 2px 2px 4px #282828;
+        background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF));
+    }
+    #mainContainer{
+        padding-left:10px;
+        padding-right:10px;
+        text-align:center;
+        width:98%;
+        font-size:12px;
+    }
+</style>
+<body>
+
+    #parse("/center.vm");
+
+<div id="main">
+    <div id="navi">
+        <div id='naviDiv'>
+            <span><img src="/images/arror.gif" width="7" height="11" border="0" alt=""></span>&nbsp;用户列表&nbsp;
+        </div>
+    </div>
+    <div id="tips">
+        <div id="buttonGroup">
+            <div class="button" onmouseout="this.style.backgroundColor='';this.style.fontWeight='normal'" onmouseover="this.style.backgroundColor='#77D1F6';this.style.fontWeight='bold'">
+                <a href="/orderForm/toAddOrder">申请新的订单</a>
+            </div>
+            <div class="button" onmouseout="this.style.backgroundColor='';this.style.fontWeight='normal'" onmouseover="this.style.backgroundColor='#77D1F6';this.style.fontWeight='bold'">
+                <a href="/orderForm/toSearch">查找订单</a>
+            </div>
+            <div class="button" onmouseout="this.style.backgroundColor='';this.style.fontWeight='normal'" onmouseover="this.style.backgroundColor='#77D1F6';this.style.fontWeight='bold'">
+                <a href="/orderForm/toSearchDealed/1">已处理订单</a>
+            </div>
+            <div class="button" onmouseout="this.style.backgroundColor='';this.style.fontWeight='normal'" onmouseover="this.style.backgroundColor='#77D1F6';this.style.fontWeight='bold'">
+                <a href="/orderForm/toSearchApply/0">未处理订单</a>
+            </div>
+        </div>
+    </div>
+##    <select id="test" onchange="bindFootPrint()">
+##        <option value="-1">test1</option>
+##        <option value="2">test2</option>
+##    </select>
+    <div id="mainContainer">
+
+
+        <table class="default" width="100%">
+            <col width="5%">
+            <col width="25%">
+            <col width="20%">
+            <col width="20%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <tr class="title">
+                <td>ID</td>
+                <td>元件名</td>
+                <td>封装</td>
+                <td>元件值</td>
+                <td>备注</td>
+                <td>数量</td>
+                <td>操作</td>
+            </tr>
+
+            #foreach($!{order} in $!{orderModelList})
+                <tr class="list">
+                    <td>$!{order.orderId}</td>
+                    <td>$!{order.componentName}</td>
+                    <td>$!{order.footprint}</td>
+                    <td>$!{order.value}</td>
+                    <td>$!{order.remark}</td>
+                    <td>$!{order.quantity}</td>
+                    <td>
+                        <a href="/orderForm/deleteOrder?orderId=$!{order.orderId}" onclick="javascript: return confirm('真的要删除吗？');">删除</a>
+                    </td>
+                </tr>
+            #end
+            <form name="addForm" action="/orderForm/addOrder/0" method="post">
+                <input type="hidden" name="orderFormId" value="$!{orderFormId}"/>
+                <tr class="list">
+                    <td></td>
+                    <td>
+                        <select onchange="bindFootPrint()" id="nameCode" name="componentCode">
+                            <option value="-1">选择元件名</option>
+                            #foreach($!{component} in $!{componentList})
+                                <option value="$!{component.componentCode}">$!{component.name}</option>
+                            #end
+                        </select>
+                    </td>
+                    <td>
+                        <select onchange="bindValue()" id="footprintCode" name="footprintCode">
+                            <option value="-1">封装</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="valueCode" name="value">
+                            <option value="-1">元件值</option>
+                        </select>
+                    </td>
+##                    <td>
+##                        <input type="text" name="value" value="输入元件值"
+##                               onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+##                               onBlur="if(!value){value=defaultValue;this.style.color='#999'}"
+##                               style="color:#999999"/>
+##                    </td>
+                    <td>
+                        <input type="text" name="remark" value="输入备注"
+                               onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                               onBlur="if(!value){value=defaultValue;this.style.color='#999'}"
+                               style="color:#999999"/>
+                    </td>
+                    <td>
+                        <input onchange="bindQuantity()" id="quantity" type="text" name="quantity" value="输入元件数量"
+                               onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+                               onBlur="if(!value){value=defaultValue;this.style.color='#999'}"
+                               style="color:#999999"/>
+                    </td>
+                    <td colspan="2" align="center"><input class="button" type="submit" value="添加"></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function bindFootPrint() {
+//        alert($("#nameCode").val());
+            var data = $("#nameCode").val();
+//            var footprint = '';
+//            footprint =$("#nameCode").next();
+            $.ajax({
+                url:'/components/getFootPrintByComponentCode/' + data,
+                type: 'POST',
+                data:null,
+                dataType:"json",
+                success:function(data,status){
+                    var html = '<option value="-1">封装</option>';
+                    var footprint = $("#footprintCode");
+                    for (var i = 0;i < data.length;i++){
+                        var footPrintCode = data[i].footprintCode;
+                        var footPrintName = data[i].footprint;
+                        var option = '<option value= ' + footPrintCode +'>' + footPrintName + '</option>'
+                        html +=option;
+                    }
+                    footprint.empty();
+                    footprint.append(html);
+                }
+            });
+    }
+
+    function bindValue() {
+//        alert($("#nameCode").val());
+        var data = $("#footprintCode").val();
+//            var footprint = '';
+//            footprint =$("#nameCode").next();
+        $.ajax({
+            url:'/components/getValueByFootprintCode/' + data,
+            type: 'POST',
+            data:null,
+            dataType:"json",
+            success:function(data,status){
+                var html = '<option value="-1">元件值</option>';
+                var valueName = $("#valueCode");
+                for (var i = 0;i < data.length;i++){
+//                        var footPrintId = data[i].componentCode;
+                    var val = data[i];
+                    var option = '<option value=' + val + '>' + val + '</option>'
+                    html +=option;
+                }
+                valueName.empty();
+                valueName.append(html);
+            }
+        });
+    }
+
+    function bindQuantity() {
+        var qua = $("#quantity").val();
+        var foot = $("#footprintCode").val();
+        var val = $("#valueCode").val();
+        $.ajax({
+            url:'/components/checkQuantityLeft?quantity=' + qua + "&footprintCode=" + foot + "&value=" + val,
+            type:'POST',
+            data:null,
+            dataType:"json",
+            success:function (data,status) {
+                if(data < 0){
+                    alert("库存不足");
+                }
+            }
+        });
+    }
+</script>

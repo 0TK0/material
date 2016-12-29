@@ -1,0 +1,209 @@
+form label {
+  cursor: pointer;
+}
+
+form label [type="radio"] {
+  margin-right: 5px;
+}
+
+form [type="text"] {
+  margin-left: 3px;
+}
+
+.Tabs-triggers {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.Tabs-triggers:before,
+.Tabs-triggers:after {
+  content: "\0020";
+  display: table;
+}
+
+.Tabs-triggers:after {
+  clear: both;
+}
+
+.Tabs-cell {
+  float: left;
+  background-color: #eee;
+  border: 1px solid #a6a6a6;
+  border-bottom-width: 0;
+}
+
+.Tabs-cell + .Tabs-cell {
+  margin-left: 5px;
+}
+
+.Tabs-cell,
+.Tabs-cell a {
+  border-radius: 3px 3px 0 0;
+}
+
+.Tabs-cell:first-child {
+  margin-left: 20px;
+  border-left: 1px solid #a6a6a6;
+}
+
+.Tabs-cell.is-selected {
+  background-color: #fff;
+}
+
+.Tabs-cell.is-selected a,
+.Tabs-cell.is-noticed a {
+  position: relative;
+}
+
+.Tabs-cell.is-selected a:after,
+.Tabs-cell.is-noticed a:before {
+  position: absolute;
+}
+
+.Tabs-cell.is-selected a:after {
+  content: "\0020";
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-color: #fff;
+}
+
+.Tabs-cell.is-noticed a {
+  padding-right: 40px;
+}
+
+.Tabs-cell.is-noticed a:before {
+  content: "!";
+  top: 50%;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  margin-top: -9px;
+  line-height: 16px;
+  text-align: center;
+  color: #f00;
+  background-color: #ff0;
+  border: 1px solid #f00;
+  border-radius: 50%;
+}
+
+.Tabs-cell a {
+  display: block;
+  padding: 0 20px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+}
+
+.Tabs-content {
+  margin-top: 15px;
+}
+
+.Tabs-panel {
+  display: none;
+}
+
+.Tabs-panel.is-selected {
+  display: block;
+}
+
+.Tabs-panel table .btn + .btn {
+  margin-left: 5px;
+}
+
+
+
+.Dialog {
+  display: none;
+  position: fixed;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.Dialog.is-shown {
+  display: block;
+}
+
+.Dialog:before,
+.Dialog-wrapper,
+.Dialog-footer:before,
+.Dialog-footer button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Dialog:before,
+.Dialog-footer:before {
+  content: "\0020";
+  width: 0;
+  height: 100%;
+}
+
+.Dialog-wrapper {
+  width: 400px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.Dialog-header {
+  position: relative;
+  border-bottom: 1px solid #a6a6a6;
+  border-radius: 3px 3px 0 0;
+}
+
+.Dialog-header button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 10px;
+  border-style: none;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Dialog-title {
+  margin: 0;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #eee;
+}
+
+.Dialog-content,
+.Dialog-footer {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.Dialog-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.Dialog-footer {
+  height: 40px;
+  border-top: 1px solid #a6a6a6;
+  border-radius: 0 0 3px 3px;
+  text-align: right;
+}
+
+
+
+.Counter--record {
+  margin-bottom: 10px;
+}
