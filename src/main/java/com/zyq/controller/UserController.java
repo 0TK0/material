@@ -27,6 +27,7 @@ public class UserController {
     @Autowired
     HostHolder hostHolder;
 
+    
     @RequestMapping(path = "/userList",method = {RequestMethod.POST,RequestMethod.GET})
     public String userList(ModelMap modelMap){
         User user = hostHolder.getUser();
