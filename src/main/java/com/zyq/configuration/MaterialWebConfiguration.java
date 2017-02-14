@@ -20,8 +20,8 @@ public class MaterialWebConfiguration extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        registry.addInterceptor(passportInterceptor);
-        registry.addInterceptor(loginRequiredInterceptor).addPathPatterns("/**").excludePathPatterns("/user/**");
+//        registry.addInterceptor(passportInterceptor);
+//        registry.addInterceptor(loginRequiredInterceptor).addPathPatterns("/**").excludePathPatterns("/user/**");
 
         super.addInterceptors(registry);
     }
